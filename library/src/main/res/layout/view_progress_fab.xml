@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:padding="@dimen/default_margin"
+             android:clipToPadding="false"
+             xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.dmallcott.progressfloatingactionbutton.ProgressView
+        android:id="@+id/pfProgress"
+        android:layout_width="@dimen/default_progress_view_size"
+        android:layout_height="@dimen/default_progress_view_size"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/pfFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:fabSize="normal"
+        app:elevation="@dimen/default_elevation"
+        />
+</FrameLayout>

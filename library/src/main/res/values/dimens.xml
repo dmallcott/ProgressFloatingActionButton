@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_progress_view_size">64dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_elevation">6dp</dimen>
+</resources>

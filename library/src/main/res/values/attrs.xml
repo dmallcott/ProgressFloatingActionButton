@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressFloatingActionButton">
+        <attr name="pFabColor" format="color"/>
+        <attr name="pFabRippleColor" format="color"/>
+        <attr name="pFabCircleColor" format="color"/>
+        <attr name="pFabProgressIcon" format="reference"/>
+        <attr name="pFabFinalIcon" format="reference"/>
+        <attr name="pFabTotalProgress" format="integer"/>
+        <attr name="pFabCurrentProgress" format="integer"/>
+        <attr name="pFabStartingProgress" format="integer"/>
+        <attr name="pFabStepSize" format="integer"/>
+    </declare-styleable>
+</resources>
