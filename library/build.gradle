@@ -1,4 +1,8 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+version = "1.0"
 
 android {
     compileSdkVersion 23
@@ -8,7 +12,7 @@ android {
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName version
     }
     buildTypes {
         release {
@@ -28,3 +32,46 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
 }
+
+def siteUrl = 'https://github.com/dmallcott/ProgressFloatingActionButton'
+def gitUrl = 'https://github.com/dmallcott/ProgressFloatingActionButton.git'
+group = 'com.dmallcott'
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavaDocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task generateJavaDocsJar(type: Jar, dependsOn: generateJavaDocs) {
+    from generateJavaDocs.destinationDir
+    classifier 'javadoc'
+}
+
+artifacts {
+    archives generateJavaDocsJar
+    archives generateSourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "ProgressFloatingActionButton"
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+
