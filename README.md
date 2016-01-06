@@ -1,4 +1,4 @@
-# ProgressFloatingActionButton
+# ProgressFloatingActionButton 
 
 This is an extension of the Floating Action Button that allows the user to monitor his progress on a given task. For example, if you have segmented form and use the FAB to validate and move to the next segment of the form. 
 
@@ -8,9 +8,44 @@ If you want to suggest changes, new functionalities or just give me tips for bet
     <img src="media/screenshot.png" alt="Screenshot" width="40%"/>
 </p>
 
-## Usage
+## Installation
 
-As soon as I get the I'll upload it to jCenter for easy usage. 
+It should be live through jCenter during the next couple of days. To use import dependency using Gradle into your module's build.gradle.
+
+```
+compile 'com.dmallcott:progressfab:1.0.0'
+```
+
+If it does not work (bear with me while I figure out how jCenter magics work), you will need to add the following into your root project's build.gradle:
+
+```
+allprojects {
+    repositories {
+        jcenter()
+        ...
+        maven {
+            url  "http://dl.bintray.com/dmallcott/maven"
+        }
+    }
+}
+```
+
+## How to use
+
+Using the pFab is as simple as using a regular FloatingActionButton. Just add this to your layout file and you're good to go:
+
+```xml
+<com.dmallcott.progressfloatingactionbutton.ProgressFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:pFabProgressIcon="@android:drawable/ic_dialog_email"
+        app:pFabFinalIcon="@android:drawable/ic_dialog_dialer"
+        app:pFabStartingProgress="0"
+        app:pFabStepSize="50"
+        app:pFabTotalProgress="100"/>
+```
 
 ## TO-DO
 
