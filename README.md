@@ -10,7 +10,7 @@ If you want to suggest changes, new functionalities or just give me tips for bet
 
 ## Usage
 
-TO-DO
+As soon as I get the I'll upload it to jCenter for easy usage. 
 
 ## TO-DO
 
