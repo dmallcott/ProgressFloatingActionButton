@@ -10,24 +10,8 @@ If you want to suggest changes, new functionalities or just give me tips for bet
 
 ## Installation
 
-It should be live through jCenter during the next couple of days. To use import dependency using Gradle into your module's build.gradle.
-
 ```
 compile 'com.dmallcott:progressfab:1.0.0'
-```
-
-If it does not work (bear with me while I figure out how jCenter magics work), you will need to add the following into your root project's build.gradle:
-
-```
-allprojects {
-    repositories {
-        jcenter()
-        ...
-        maven {
-            url  "http://dl.bintray.com/dmallcott/maven"
-        }
-    }
-}
 ```
 
 ## How to use
