@@ -1,5 +1,7 @@
 # ProgressFloatingActionButton 
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ProgressFloatingActionButton-green.svg?style=true)](https://android-arsenal.com/details/1/3075) [ ![Download](https://api.bintray.com/packages/dmallcott/maven/ProgressFloatingActionButton/images/download.svg) ](https://bintray.com/dmallcott/maven/ProgressFloatingActionButton/_latestVersion)
+
 This is an extension of the Floating Action Button that allows the user to monitor his progress on a given task. For example, if you have segmented form and use the FAB to validate and move to the next segment of the form. 
 
 If you want to suggest changes, new functionalities or just give me tips for better programming I would greatly appreciate it.
