@@ -184,7 +184,7 @@ public class ProgressFloatingActionButton extends FrameLayout implements Progres
     }
 
     public void setProgressColor (int color) {
-        mProgressView.mColor = color;
+        mProgressView.setColor(color);
     }
 
     public void setFabColor(int color) {
