@@ -1,5 +1,6 @@
 package com.dmallcott.demo;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        fab.setProgressColor(Color.BLACK);
     }
 
     @Override

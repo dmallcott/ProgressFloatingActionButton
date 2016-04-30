@@ -164,6 +164,12 @@ public class ProgressView extends View {
         this.mListener = mListener;
     }
 
+    public void setColor(int mColor) {
+        this.mColor = mColor;
+        paint.setColor(mColor);
+        invalidate();
+    }
+
     /*
     * Interface callbacks
     * */
